@@ -1,0 +1,15 @@
+%h1
+  = @event.title
+= @event.body
+%br
+= @event.start_time
+%br
+= @event.end_time
+%br
+
+.menu
+  = link_to 'Edit your event', edit_event_path(@event)
+  %br
+  = link_to 'Delete your event', @event, method: :delete
+  %br
+  = link_to 'Back Home', events_path(@event)

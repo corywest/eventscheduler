@@ -1,0 +1,7 @@
+%h1 Event Scheduler
+- @events.each do |event|
+  = link_to simple_format(event.title), event_path(event.id)
+- if user_signed_in?
+  .home-menu
+    = link_to "Create a new event here", new_event_path(@event)
+  %br

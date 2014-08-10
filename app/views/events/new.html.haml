@@ -1,0 +1,19 @@
+%h1 Create an event
+
+.align_fields
+  = form_for @event, action: 'create', method: 'POST' do |f|
+    = f.text_field :title, placeholder: 'Title', class: "col-md-14"
+    %br
+    = f.text_field :body, placeholder: 'Body', class: "col-md-14"
+    %br
+    = f.text_field :start_time, placeholder: 'Start Time', class: "col-md-14"
+    %br
+    = f.text_field :end_time, placeholder: 'End Time', class: "col-md-14"
+    %br
+    = f.submit 'Save this new event', class: 'btn btn-primary'
+.flash-notice
+  - if flash[:notice]
+    .notice
+      = flash[:notice]
+.menu
+  = link_to 'Back Home', events_path(@event)

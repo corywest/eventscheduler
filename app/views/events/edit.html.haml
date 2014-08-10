@@ -1,0 +1,22 @@
+%h1 Edit event with ID: #{@event.id}
+
+.align_fields
+  = form_for @event, action: 'update', method: 'PUT' do |f|
+    = f.text_field :title, placeholder: 'Title', class: "col-md-14"
+    %br
+    = f.text_field :body, placeholder: 'Body', class: "col-md-14"
+    %br
+    = f.text_field :start_time, placeholder: 'Start Time', class: "col-md-14"
+    %br
+    = f.text_field :end_time, placeholder: 'End Time', class: "col-md-14"
+    %br
+    = f.submit 'Save your changes', class: 'btn btn-primary'
+
+    - if flash[:notice]
+      .notice
+        = flash[:notice]
+%br
+.menu
+  = link_to 'Change your mind?', event_path(@event.id)
+  %br
+  = link_to 'Back Home', events_path(@event)
