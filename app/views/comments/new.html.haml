@@ -1,0 +1,7 @@
+%h1 New Comment
+
+= form_for :comment, action: 'create', method: 'POST' do |f|
+  = f.text_field :body, placeholder: 'New comment here...', size: 50, class: "col-md-14", class: 'comment_field'
+  %br
+  = f.submit "Save Comment", class: 'btn btn-primary'
+%br

@@ -7,7 +7,11 @@
 = @event.end_time
 %br
 
+= render template: 'comments/show'
+
 .menu
+  = link_to 'Add Comment', new_event_comment_path(@event)
+  %br
   = link_to 'Edit your event', edit_event_path(@event)
   %br
   = link_to 'Delete your event', @event, method: :delete

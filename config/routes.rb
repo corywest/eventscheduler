@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :events
+  resources :events do
+    resources :comments
     root to: 'events#index'
+  end
 
   devise_scope :user do
     get "sign_in", to: "devise/sessions#new"
