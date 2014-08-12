@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    render 'comments/show'
   end
 
   def new
@@ -15,9 +16,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    if @comment.save
-      redirect_to :back
-    end
+    @comment.save
   end
 
   def edit

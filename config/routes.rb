@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root to: 'events#index'
   end
 
+
   devise_scope :user do
     get "sign_in", to: "devise/sessions#new"
   end
