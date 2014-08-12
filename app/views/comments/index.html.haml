@@ -1,1 +1,4 @@
-= @comments.body
+%br
+- @event.comments.each do |comment|
+  = comment.body
+  %br

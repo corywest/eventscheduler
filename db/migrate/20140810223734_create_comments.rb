@@ -2,6 +2,8 @@ class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
       t.string :body
+      
+      t.references :event, index: true
 
       t.timestamps
     end

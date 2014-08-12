@@ -15,9 +15,12 @@ ActiveRecord::Schema.define(version: 20140810223734) do
 
   create_table "comments", force: true do |t|
     t.string   "body"
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "comments", ["event_id"], name: "index_comments_on_event_id"
 
   create_table "events", force: true do |t|
     t.string   "title"
