@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
-    render 'comments/show'
   end
 
   def new
@@ -33,8 +32,6 @@ class CommentsController < ApplicationController
     Comment.find(params[:id]).destroy
     redirect_to event_path(@event)
   end
-
-  private
 
   def comment_params
     params.require(:comment).permit(:body)
