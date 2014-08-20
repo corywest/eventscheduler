@@ -7,6 +7,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @instagram = Instagram.tag_recent_media("m3", {count: 18})
   end
 
   def new

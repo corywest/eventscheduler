@@ -12,6 +12,9 @@
   = @event.end_time
   %br
 
+  - @instagram.each do |instagram|
+    = image_tag instagram.images.thumbnail.url
+
   = render template: 'comments/index'
 
   .menu
