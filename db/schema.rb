@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140810223734) do
     t.string   "body"
     t.string   "start_time"
     t.string   "end_time"
+    t.string   "start_date"
+    t.string   "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

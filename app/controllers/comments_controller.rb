@@ -19,16 +19,6 @@ class CommentsController < ApplicationController
     redirect_to event_path(@event)
   end
 
-  def edit
-    @comment = Comment.find(params[:id])
-  end
-
-  def update
-    @comment = Comment.find(params[:id])
-    @comment.update_attributes(comment_params)
-    redirect_to event_path(@event)
-  end
-
   def destroy
     Comment.find(params[:id]).destroy
     redirect_to event_path(@event)
