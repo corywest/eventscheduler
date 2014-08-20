@@ -3,10 +3,17 @@
     = @event.title
   = @event.body
   %br
+  = @event.start_date
+  %br
+  = @event.end_date
+  %br
   = @event.start_time
   %br
   = @event.end_time
   %br
+
+  - @instagram.each do |instagram|
+    = image_tag instagram.images.thumbnail.url
 
   = render template: 'comments/index'
 

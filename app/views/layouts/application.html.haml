@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title EventScheduler
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %link{:href => "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", :rel => "stylesheet"}
+      %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+      %script{:src => "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+      = javascript_include_tag 'application', 'data-turbolinks-track' => true
+      = csrf_meta_tags
+  %body
+    = yield
+    = render 'layouts/user_session'

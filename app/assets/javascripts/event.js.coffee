@@ -1,3 +1,3 @@
 $ ->
-  $('.btn btn-primary').click ->
-    console.log 'Submitted!'
+  $('btn btn-primary').click ->
+    $('#basicModal').modal()

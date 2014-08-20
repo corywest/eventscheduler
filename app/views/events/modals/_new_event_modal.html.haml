@@ -1,0 +1,11 @@
+#new_event_modal.modal.fade{'aria-hidden' => 'true', role: 'dialog'}
+  .modal-dialog{'style' => 'width: 200px;'}
+    .modal-content
+      .modal-header
+        %h3 Add new event!
+        .modal-actions
+          %button.btn.btn-default{'data-dismiss' => 'modal', type: 'button'} Cancel
+          %button.btn.btn-primary.submit Save Event
+        .clearfix
+      .modal-body
+        = render template: 'events/new'
