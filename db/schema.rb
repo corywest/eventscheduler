@@ -25,10 +25,11 @@ ActiveRecord::Schema.define(version: 20140810223734) do
   create_table "events", force: true do |t|
     t.string   "title"
     t.string   "body"
-    t.string   "start_time"
-    t.string   "end_time"
-    t.string   "start_date"
-    t.string   "end_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "hash_tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
