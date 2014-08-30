@@ -7,7 +7,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @instagram = Instagram.tag_recent_media("m3", {count: 18})
+    show_instagram
   end
 
   def new
@@ -48,6 +48,10 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :body, :start_time, :end_time, :start_date, :end_date)
+    params.require(:event).permit(:title, :body, :start_time, :end_time, :start_date, :end_date, :hash_tag)
+  end
+
+  def show_instagram
+    @instagram = Instagram.tag_recent_media(@event.hash_tag, {count: 18})
   end
 end

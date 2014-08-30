@@ -1,30 +1,32 @@
 - if user_signed_in?
-  %h1
-    = @event.title
-  = @event.body
-  %br
-  = @event.start_date
-  %br
-  = @event.end_date
-  %br
-  = @event.start_time
-  %br
-  = @event.end_time
-  %br
+  .col-md-12
+    %h1
+      = @event.title
+    = @event.body
+    %br
+    = @event.start_date
+    %br
+    = @event.end_date
+    %br
+    = @event.start_time
+    %br
+    = @event.end_time
+    %br
+    %br
 
-  - @instagram.each do |instagram|
-    = image_tag instagram.images.thumbnail.url
+    - @instagram.each do |instagram|
+      = image_tag instagram.images.thumbnail.url
 
-  = render template: 'comments/index'
+    = render template: 'comments/index'
 
-  .menu
-    %br
-    = link_to 'Add Comment', new_event_comment_path(@event)
-    %br
-    = link_to 'Edit your event', edit_event_path(@event)
-    %br
-    = link_to 'Delete your event', @event, method: :delete
-    %br
-    = link_to 'Back Home', events_path(@event)
+    .menu
+      %br
+      = link_to 'Add Comment', new_event_comment_path(@event)
+      %br
+      = link_to 'Edit your event', edit_event_path(@event)
+      %br
+      = link_to 'Delete your event', @event, method: :delete
+      %br
+      = link_to 'Back Home', events_path(@event)
 - else
   %h3 You must be signed in to see events!

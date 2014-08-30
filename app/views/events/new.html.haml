@@ -14,6 +14,8 @@
     %br
     = f.text_field :end_time, placeholder: 'End Time', class: "col-md-14"
     %br
+    = f.text_field :hash_tag, placeholder: 'Hash Tag', class: "col-md-14"
+    %br
     = f.submit 'Save this new event', class: 'btn btn-primary'
 .flash-notice
   - if flash[:notice]
