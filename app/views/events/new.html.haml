@@ -1,25 +1,21 @@
 %h1 Create an event
 
-.align_fields
+.row
   = form_for @event, action: 'create', method: 'POST' do |f|
-    = f.text_field :title, placeholder: 'Title', class: "col-md-14"
+    = f.text_field :title, placeholder: 'Title', class: "large-4 columns"
     %br
-    = f.text_field :body, placeholder: 'Body', class: "col-md-14"
+    = f.text_field :body, placeholder: 'Body'
     %br
-    = f.text_field :start_date, placeholder: 'Start Date', class: "col-md-14"
+    = f.text_field :start_date, placeholder: 'Start Date'
     %br
-    = f.text_field :end_date, placeholder: 'End Date', class: "col-md-14"
+    = f.text_field :end_date, placeholder: 'End Date'
     %br
-    = f.text_field :start_time, placeholder: 'Start Time', class: "col-md-14"
+    = f.text_field :start_time, placeholder: 'Start Time'
     %br
-    = f.text_field :end_time, placeholder: 'End Time', class: "col-md-14"
+    = f.text_field :end_time, placeholder: 'End Time'
     %br
-    = f.text_field :hash_tag, placeholder: 'Hash Tag', class: "col-md-14"
+    = f.text_field :hash_tag, placeholder: 'Hash Tag'
     %br
-    = f.submit 'Save this new event', class: 'btn btn-primary'
-.flash-notice
-  - if flash[:notice]
-    .notice
-      = flash[:notice]
-.menu
+    = f.submit 'Save this new event', class: "button disabled"
+
   = link_to 'Back Home', events_path(@event)

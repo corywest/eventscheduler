@@ -1,4 +1,6 @@
-%br
-- @event.comments.each do |comment|
-  = comment.body
-  %br
+- if @event.comments.present?
+  .comments-section.col-md-3
+    %br
+    - @event.comments.each do |comment|
+      = comment.body
+      %br

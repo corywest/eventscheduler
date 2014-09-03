@@ -7,7 +7,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    show_instagram
+    # show_instagram
   end
 
   def new

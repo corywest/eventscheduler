@@ -4,6 +4,8 @@ ruby '2.0.0'
 gem 'rails', '4.0.8'
 gem 'sprockets', '<= 2.11.0'
 gem 'devise'
+gem "cancan"
+gem 'foundation-rails'
 gem 'instagram'
 
 group :development, :test do
@@ -17,7 +19,6 @@ group :test do
 end
 
 gem "sass-rails", "~> 4.0.2"
-gem 'bootstrap-sass', '2.1'
 gem 'haml'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
